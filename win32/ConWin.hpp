@@ -61,7 +61,7 @@ class ConWindow
   COORD  size;
   COORD  pos;
   WORD   attribs;
-  PCHAR_INFO  data;
+  PCHAR_INFO  data; // this is always in UnicodeChar
 
  public:
   ConWindow();
@@ -94,7 +94,7 @@ class ConWindow
 
  protected:
   void box(short x, short y, short width, short height,
-           char tl, char tr, char bl, char br, char horiz, char vert);
+           wchar_t tl, wchar_t tr, wchar_t bl, wchar_t br, wchar_t horiz, wchar_t vert);
 }; // end ConWindow
 
 #endif // INCLUDED_CONWIN_HPP
